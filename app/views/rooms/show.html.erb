@@ -1,0 +1,13 @@
+<h1>Chat</h1>
+
+<div id="messages" style="overflow-y: scroll; height:200px; width:400px">
+  <%= render @messages %>
+</div>
+
+
+<form>
+  <label>Say Something: </label>
+  <input type="text" data-behavior="room_speaker">
+</form>
+
+<%= link_to 'Clear', 'rooms/delete',method: :delete %>
