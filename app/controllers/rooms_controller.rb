@@ -1,6 +1,6 @@
 class RoomsController < ApplicationController
 
-  http_basic_authenticate_with name: "admin", password: ENV['pass'], except: [:show]
+  http_basic_authenticate_with name: "admin", password: "foobar" ,except: [:show]
   def show
     @messages= Message.all
   end
